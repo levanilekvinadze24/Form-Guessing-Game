@@ -1,22 +1,39 @@
 # Simple Python Interpreter
 
-A minimal Java-based interpreter for a Python-like language subset. This interpreter tokenizes, parses, and executes basic programming constructs such as variable assignments, arithmetic operations, conditionals, and loops.
+This project demonstrates a minimal Java-based interpreter for a subset of a Python-like language. The interpreter includes a lexer, parser, and execution engine, allowing for basic variable assignments, arithmetic operations, conditional statements, and loops.
 
 ## Features
 
-- Tokenization of source code
-- Parsing of expressions and statements
-- Execution of variable assignments, arithmetic operations, conditionals, and loops
-- Example scripts demonstrating usage
+- **Lexer**: Tokenizes input source code into a list of tokens.
+- **Parser**: Parses tokens into statements (currently a naive implementation).
+- **Interpreter**: Executes parsed statements, supporting:
+  - Variable assignments
+  - Arithmetic operations
+  - Conditional statements (`if`)
+  - Loops (`while`)
+  - Print statements
 
-## Getting Started
+## Token Types
 
-### Prerequisites
+The interpreter recognizes the following token types:
 
-- Java Development Kit (JDK) 8 or higher
+- **Operators**: `+`, `-`, `*`, `/`, `%`, `=`, `==`, `!=`, `>`, `<`, `>=`, `<=`
+- **Literals**: Identifiers and numbers
+- **Keywords**: `if`, `else`, `while`, `print`
+- **Braces**: `{`, `}`, `(`, `)`
 
-### Installation
+## Example Usage
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/SimplePythonInterpreter.git
+Here is a small code snippet that can be interpreted by the interpreter:
+
+```python
+x = 5
+y = 10
+z = x + y
+if z > 12: {
+  print(z)
+}
+while x < 10: {
+  print(x)
+  x = x + 1
+}
