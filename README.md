@@ -1,39 +1,18 @@
-# Simple Python Interpreter
+# 🧩 TokenType.java – Token Definitions for Interpreter
 
-This project demonstrates a minimal Java-based interpreter for a subset of a Python-like language. The interpreter includes a lexer, parser, and execution engine, allowing for basic variable assignments, arithmetic operations, conditional statements, and loops.
+This file defines the core `TokenType` enum, representing the various tokens used by the interpreter during lexical analysis. Tokens are the smallest building blocks of source code, such as operators, keywords, and literals.
 
-## Features
+## 📋 Token Categories
+- **Operators** – `PLUS`, `MINUS`, `STAR`, `SLASH`, `MOD`
+- **Delimiters** – `LPAREN`, `RPAREN`, `LBRACE`, `RBRACE`, `EQ`, `COLON`
+- **Comparisons** – `GT`, `GTE`, `LT`, `LTE`, `EQEQ`, `NEQ`
+- **Literals** – `IDENT`, `NUMBER`
+- **Keywords** – `IF`, `ELSE`, `WHILE`, `PRINT`
+- **Utility** – `EOF` (End of File marker)
 
-- **Lexer**: Tokenizes input source code into a list of tokens.
-- **Parser**: Parses tokens into statements (currently a naive implementation).
-- **Interpreter**: Executes parsed statements, supporting:
-  - Variable assignments
-  - Arithmetic operations
-  - Conditional statements (`if`)
-  - Loops (`while`)
-  - Print statements
+## 🛠️ Purpose
+The `TokenType` enum categorizes input from the source code, enabling the interpreter to classify and process each component accurately. This is a crucial step in parsing and executing code.
 
-## Token Types
+---
 
-The interpreter recognizes the following token types:
-
-- **Operators**: `+`, `-`, `*`, `/`, `%`, `=`, `==`, `!=`, `>`, `<`, `>=`, `<=`
-- **Literals**: Identifiers and numbers
-- **Keywords**: `if`, `else`, `while`, `print`
-- **Braces**: `{`, `}`, `(`, `)`
-
-## Example Usage
-
-Here is a small code snippet that can be interpreted by the interpreter:
-
-```python
-x = 5
-y = 10
-z = x + y
-if z > 12: {
-  print(z)
-}
-while x < 10: {
-  print(x)
-  x = x + 1
-}
+✨ **More files coming soon to support the full interpreter!**
